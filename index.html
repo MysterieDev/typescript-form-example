@@ -5,12 +5,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css" />
+    <script defer src="./build/bundle.js"></script>
 </head>
 
 <body>
-    <my-beispiel></my-beispiel>
-    <script defer src="./build/bundle.js"></script>
-    <input type="text" id="myInput" />
+    <div class="container grid-sm">
+        <form id="myForm">
+            <!-- form validation class: is-success -->
+            <div class="form-group">
+                <label class="form-label" for="input-name">Name</label>
+                <input class="form-input" type="text" id="input-name" placeholder="Max Mustermann" />
+                <p id="name-hint" class="form-input-hint"></p>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="input-mail">E-Mail</label>
+                <input class="form-input" type="text" id="input-mail" placeholder="max.mustermann@web.de" />
+                <p id="email-hint" class="form-input-hint"></p>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="input-age">Alter</label>
+                <input class="form-input" type="number" id="input-age" placeholder="25" />
+                <p id="age-hint" class="form-input-hint"></p>
+            </div>
+
+            <button>submit</button>
+        </form>
+    </div>
 </body>
 
 </html>

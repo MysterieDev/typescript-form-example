@@ -4,12 +4,13 @@ import typescript from "rollup-plugin-typescript2";
 export default {
     input: "./src/index.ts",
     output: {
+        name: "_formvalidator",
         format: "iife",
-        file: "./build/bundle.js"
+        file: "./build/bundle.js",
     },
     plugins: [
         typescript({
-            tsconfig: "./tsconfig.json"
-        })
-    ]
+            tsconfig: "./tsconfig.json",
+        }),
+    ],
 };
