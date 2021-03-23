@@ -1,0 +1,16 @@
+{
+    "name": "typescript-assignment",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "rollup -c"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "rollup": "^2.41.0",
+        "rollup-plugin-typescript2": "^0.26.0",
+        "typescript": "^3.9.9"
+    }
+}
