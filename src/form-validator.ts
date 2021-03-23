@@ -1,3 +1,5 @@
+import { setInputSuccess, formObject, setInputError } from "./dom-utils";
+
 export function checkName(name: string | undefined): boolean {
   const hint = document.getElementById("name-hint");
   if (name && name.length > 3 && name.length < 30) {
@@ -41,27 +43,4 @@ export function checkAge(age: string | undefined) {
     "This field is required"
   );
   return false;
-}
-
-export function setInputError(
-  inputEl: HTMLInputElement | null,
-  hintEl: HTMLElement | null,
-  message: string
-) {
-  if (inputEl && hintEl) {
-    inputEl.classList.remove("is-success");
-    inputEl.classList.add("is-error");
-    hintEl.textContent = message;
-  }
-}
-
-export function setInputSuccess(
-  inputEl: HTMLInputElement | null,
-  hintEl: HTMLElement | null
-) {
-  if (inputEl && hintEl) {
-    inputEl.classList.add("is-success");
-    inputEl.classList.remove("is-error");
-    hintEl.textContent = "";
-  }
 }
